@@ -172,11 +172,6 @@ variable "schedule_timezone" {
   type        = string
   description = "IANA format timezone to use for Maintenance Window scheduling"
   default     = "UTC"
-
-  validation {
-    condition     = fileexists("/usr/share/zoneinfo.default/${var.schedule_timezone}") || fileexists("/usr/share/zoneinfo/${var.schedule_timezone}")
-    error_message = "Time zone invalid or validation failed."
-  }
 }
 
 variable "install_cutoff" {

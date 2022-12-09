@@ -12,11 +12,11 @@ module "patch_manager" {
   ]
   schedule_timezone = "America/Sao_Paulo"
 
-  install_notification_configs = [{ # Create a new topic or use one existed?
-        notification_arn    = "aws_sns_topic.example.arn"
-        notification_events = ["All"]
-        notification_type   = "Command"
-      }]
+  # install_notification_configs = [{ # Create a new topic or use one existed?
+  #       notification_arn    = "aws_sns_topic.example.arn"
+  #       notification_events = ["All"]
+  #       notification_type   = "Command"
+  #     }]
 
   max_install_errors = 3
   max_install_concurrency = 10
